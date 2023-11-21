@@ -5,6 +5,9 @@ namespace Area51
 {
 	internal class Program
 	{
+		// The linear way is ready and working. Left threads version.
+		// TODO:
+		// The elevator need to be in seperate method.
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Welcome to Area 51");
