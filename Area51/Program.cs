@@ -5,9 +5,6 @@ namespace Area51
 {
 	internal class Program
 	{
-		// The linear way is ready and working. Left threads version.
-		// TODO:
-		// The elevator need to be in seperate method.
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Welcome to Area 51");
@@ -49,12 +46,6 @@ namespace Area51
             Console.WriteLine("Base is closed! Elevator stop working.");
         }
 
-		public static int PressButton()
-		{
-			Console.WriteLine("Choose floor: G[1], S[2], T1[3], T2[4]");
-			int selectedFloor = int.Parse(Console.ReadLine());
-			return selectedFloor;
-		}
 		public static Agent MakeAgent()
 		{
 			Agent agent = new Agent();
@@ -71,7 +62,7 @@ namespace Area51
 			if(agent.SecurityLevel == "Confidential" && floor == 1 )
 			{
 				Console.WriteLine();
-				Console.WriteLine("Security check passed. The door is opening and agen leave the elevator.");
+				Console.WriteLine("Security check passed. The door is opening and agent leave the elevator.");
 				Console.WriteLine();
 				return true;
 			}
@@ -79,7 +70,7 @@ namespace Area51
             if (agent.SecurityLevel == "Secret" && (floor == 1 || floor == 2))
 			{
                 Console.WriteLine();
-                Console.WriteLine("Security check passed. The door is opening and agen leave the elevator.");
+                Console.WriteLine("Security check passed. The door is opening and agent leave the elevator.");
 				Console.WriteLine();
 				return true;
 			}
@@ -87,7 +78,7 @@ namespace Area51
 			if (agent.SecurityLevel == "Top-secret")
 			{
 				Console.WriteLine();
-				Console.WriteLine("Security check passed. The door is opening and agen leave the elevator.");
+				Console.WriteLine("Security check passed. The door is opening and agent leave the elevator.");
 				Console.WriteLine();
 				return true;
 			}
